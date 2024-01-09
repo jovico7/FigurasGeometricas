@@ -4,4 +4,7 @@ Esta clase tendrá tres atributos, dos heredados de la clase FiguraGeometrica y 
 Implementa los métodos getters y setters de cada atributo, codifica el método heredado, implementa el de la interfaz y añade el método toString. -->
 
 <?php
+class Rectangulo extends FiguraGeometrica implements PerimetroM {
 
+    
+}
