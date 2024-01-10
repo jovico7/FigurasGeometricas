@@ -20,7 +20,7 @@ abstract class FiguraGeometrica {
     public function getFigura1 () {
         return $this->tipoFigura;
     }
-
+    
     public function getLado1 () {
         return $this->lado1;
     }
