@@ -1,33 +1,26 @@
 <?php
+include "../figuraGeometrica.php";
 class Cuadrado extends FiguraGeometrica implements PerimetroM {
-    private $lado2;
+    private $lado;
 
-    public function __construct($lado1, $lado2) {
-        parent::__construct("Cuadrado", $lado1);
-        parent::__construct("Cuadrado", $lado2);
+    public function __construct($lado) {
+        parent::__construct("Cuadrado", $lado);
+        $this->lado = $lado;
     }
 
-    public function getLado1() {
-        return $this->lado1;
+    public function getLado() {
+        return $this->lado;
     }
 
-    public function getLado2() {
-        return $this->lado2;
-    }
-
-    public function setLado1($lado1) {
-        $this->lado1 = $lado1;
-    }
-
-    public function setLado2($lado2) { 
-        $this->lado2 = $lado2;
+    public function setLado($lado) {
+        $this->lado = $lado;
     }
 
     public function area() {
-        return $this->getLado1() * $this->getLado2();
+        return $this->lado * $this->lado;
     }
-    
+
     public function perimetro() {
-        return $this->getLado1() + $this->getLado2() + $this->getLado1() + $this->getLado2();
+        return 4 * $this->lado;
     }
 }

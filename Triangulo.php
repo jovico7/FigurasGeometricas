@@ -4,6 +4,7 @@ Esta clase tendrá tres atributos, dos heredados de la clase FiguraGeometrica y 
 Implementa los métodos getters y setters de cada atributo, codifica el método heredado e implementa el de la interfaz. -->
 
 <?php
+include "./figuraGeometrica.php";
 class Triangulo extends FiguraGeometrica implements PerimetroM {
     private $lado2;
 

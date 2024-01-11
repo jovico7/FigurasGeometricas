@@ -1,4 +1,6 @@
 <?php
+include "./figuraGeometrica.php";
+
 class Circulo extends FiguraGeometrica implements PerimetroM {
     private $lado2;
 

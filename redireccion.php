@@ -4,16 +4,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     switch ($figura) {
         case "triangulo":
-            header("Location: ./Triangulo.php");
+            header("Location: ./proc/proc_triangulo.php");
             break;
         case "rectangulo":
-            header("Location: ./Rectangulo.php");
+            header("Location: ./proc/proc_rectangulo.php");
             break;
         case "cuadrado":
-            header("Location: cuadrado.php");
+            header("Location: ./proc/proc_cuadrado.php");
             break;
         case "circulo":
-            header("Location: circulo.php");
+            header("Location: ./proc/proc_circulo.php");
             break;
         default:
             // Manejar caso no válido si es necesario
