@@ -1,10 +1,9 @@
 <?php
-class Cuadrado extends FiguraGeometrica implements PerimetroM {
+class Circulo extends FiguraGeometrica implements PerimetroM {
     private $lado2;
 
-    public function __construct($lado1, $lado2) {
-        parent::__construct("Cuadrado", $lado1);
-        parent::__construct("Cuadrado", $lado2);
+    public function __construct($lado1) {
+        parent::__construct("Circulo", $lado1);
     }
 
     public function getLado1() {
