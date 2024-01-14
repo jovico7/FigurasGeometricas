@@ -18,6 +18,7 @@ function validarFormulario() {
     switch (figuraSeleccionada) {
         case 'triangulo':
             return validarTriangulo();
+            break;
         case 'rectangulo':
             return validarRectangulo();
         case 'cuadrado':
@@ -25,7 +26,11 @@ function validarFormulario() {
         case 'circulo':
             return validarCirculo();
         default:
-            alert('Selecciona una figura válida.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Selecciona una figura válida.'
+            });
             return false;
     }
 }

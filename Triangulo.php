@@ -38,7 +38,9 @@ class Triangulo extends FiguraGeometrica implements PerimetroM {
     }
 
     public function toString() {
-        return "Área: " . $this->area() . "<br>" .
+        return "Primer lado: " . $this->getLado1() . "<br>" .
+               "Segundo lado: " . $this->getLado2() . "<br>" .
+               "Área: " . $this->area() . "<br>" .
                "Perímetro: " . $this->perimetro() . "<br>";
     }
 }
