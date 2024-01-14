@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Imprime los resultados utilizando el método toString
                 echo "<h3>Resultados:</h3>";
                 echo $triangulo->toString();
+                echo "<a href='./index.php'>Volver atrás</a>";
             break;
         case "rectangulo":
             include "./Rectangulo.php";
@@ -25,22 +26,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Imprime los resultados utilizando el método toString
                 echo "<h3>Resultados:</h3>";
                 echo $rectangulo->toString();
+                echo "<a href='./index.php'>Volver atrás</a>";
             break;
         case "cuadrado":
-                    include "./Cuadrado.php";
-                // Recupera el valor del lado del cuadrado enviado por el formulario
-                $ladoCuadrado = $_POST["ladoCuadrado"];
+            include "./Cuadrado.php";
+            // Recupera el valor del lado del cuadrado enviado por el formulario
+            $ladoCuadrado = $_POST["ladoCuadrado"];
 
-                // Crea un objeto Cuadrado con el valor del lado recuperado
-                $cuadrado = new Cuadrado($ladoCuadrado);
+            // Crea un objeto Cuadrado con el valor del lado recuperado
+            $cuadrado = new Cuadrado($ladoCuadrado);
 
-                // Imprime los resultados utilizando el método toString
-                echo "<h3>Resultados:</h3>";
-                echo $cuadrado->toString();
+            // Imprime los resultados utilizando el método toString
+            echo "<h3>Resultados:</h3>";
+            echo $cuadrado->toString();
+            echo "<a href='./index.php'>Volver atrás</a>";
             break;
         case "circulo":
             include "./Circulo.php";
             $radioCirculo = $_POST['radioCirculo'];
+
+            $circulo = new Circulo($radioCirculo);
+
+            echo "<h3>Resultados:</h3>";
+            echo $circulo->toString();
+            echo "<a href='./index.php'>Volver atrás</a>";
             break;
         default:
             // Manejar caso no válido si es necesario

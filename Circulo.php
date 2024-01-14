@@ -18,16 +18,15 @@ class Circulo extends FiguraGeometrica implements PerimetroM {
     }
 
     public function area() {
-        return pi() * $this->radio * $this->radio;
+        return round(pi() * $this->radio * $this->radio);
     }
     
     public function perimetro() {
-        return 2 * pi() * $this->radio;
+        return round(2 * pi() * $this->radio);
     }
 
     public function toString() {
-        return "Tipo de figura: " . $this->getTipoFigura() . "<br>" .
-               "Radio: " . $this->getRadio() . "<br>" .
+        return "Radio: " . $this->getRadio() . "<br>" .
                "Área: " . $this->area() . "<br>" .
                "Perímetro: " . $this->perimetro() . "<br>";
     }
