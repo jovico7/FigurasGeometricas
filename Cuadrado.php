@@ -1,5 +1,7 @@
 <?php
-include "../figuraGeometrica.php";
+
+
+include "./figuraGeometrica.php";
 class Cuadrado extends FiguraGeometrica implements PerimetroM {
     private $lado;
 
@@ -22,5 +24,11 @@ class Cuadrado extends FiguraGeometrica implements PerimetroM {
 
     public function perimetro() {
         return 4 * $this->lado;
+    }
+
+    public function toString() {
+        return "Lado: " . $this->getLado() . "<br>" .
+               "Área: " . $this->area() . "<br>" .
+               "Perímetro: " . $this->perimetro() . "<br>";
     }
 }

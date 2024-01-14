@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form action="redireccion.php" method="post">
+<form action="./redireccion.php" method="post">
   <label for="figura">Selecciona una figura geométrica:</label>
   <select name="figura" id="figura" onchange="mostrarFormulario()">
     <option value="triangulo">Triángulo</option>
@@ -25,31 +25,31 @@
   <!-- Formulario para Triángulo -->
   <div id="trianguloForm" class="hidden">
     <label for="baseTriangulo">Base:</label>
-    <input type="text" name="baseTriangulo">
+    <input type="text" name="baseTriangulo" id="baseTriangulo">
     <br>
     <label for="alturaTriangulo">Altura:</label>
-    <input type="text" name="alturaTriangulo">
+    <input type="text" name="alturaTriangulo" id="alturaTriangulo">
   </div>
 
   <!-- Formulario para Rectángulo -->
   <div id="rectanguloForm" class="hidden">
     <label for="lado1Rectangulo">Lado 1:</label>
-    <input type="text" name="lado1Rectangulo">
+    <input type="text" name="lado1Rectangulo" id="lado1Rectangulo">
     <br>
     <label for="lado2Rectangulo">Lado 2:</label>
-    <input type="text" name="lado2Rectangulo">
+    <input type="text" name="lado2Rectangulo" id="lado2Rectangulo">
   </div>
 
   <!-- Formulario para Cuadrado -->
   <div id="cuadradoForm" class="hidden">
     <label for="ladoCuadrado">Lado:</label>
-    <input type="text" name="ladoCuadrado">
+    <input type="text" name="ladoCuadrado" id="ladoCuadrado">
   </div>
 
   <!-- Formulario para Círculo -->
   <div id="circuloForm" class="hidden">
     <label for="radioCirculo">Radio:</label>
-    <input type="text" name="radioCirculo">
+    <input type="text" name="radioCirculo" id="radioCirculo">
   </div>
 
   <br>

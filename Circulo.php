@@ -2,33 +2,33 @@
 include "./figuraGeometrica.php";
 
 class Circulo extends FiguraGeometrica implements PerimetroM {
-    private $lado2;
+    private $radio;
 
-    public function __construct($lado1) {
-        parent::__construct("Circulo", $lado1);
+    public function __construct($radio) {
+        parent::__construct("Circulo", $radio);
+        $this->radio = $radio;
     }
 
-    public function getLado1() {
-        return $this->lado1;
+    public function getRadio() {
+        return $this->radio;
     }
 
-    public function getLado2() {
-        return $this->lado2;
-    }
-
-    public function setLado1($lado1) {
-        $this->lado1 = $lado1;
-    }
-
-    public function setLado2($lado2) { 
-        $this->lado2 = $lado2;
+    public function setRadio($radio) {
+        $this->radio = $radio;
     }
 
     public function area() {
-        return $this->getLado1() * $this->getLado2();
+        return pi() * $this->radio * $this->radio;
     }
     
     public function perimetro() {
-        return $this->getLado1() + $this->getLado2() + $this->getLado1() + $this->getLado2();
+        return 2 * pi() * $this->radio;
+    }
+
+    public function toString() {
+        return "Tipo de figura: " . $this->getTipoFigura() . "<br>" .
+               "Radio: " . $this->getRadio() . "<br>" .
+               "Área: " . $this->area() . "<br>" .
+               "Perímetro: " . $this->perimetro() . "<br>";
     }
 }

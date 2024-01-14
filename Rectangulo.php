@@ -32,4 +32,9 @@ class Rectangulo extends FiguraGeometrica implements PerimetroM {
     public function perimetro() {
         return (2 * $this->getLado1()) + (2 * $this->getLado2());
     }
+
+    public function toString() {
+        return "Área: " . $this->area() . "<br>" .
+               "Perímetro: " . $this->perimetro() . "<br>";
+    }
 }

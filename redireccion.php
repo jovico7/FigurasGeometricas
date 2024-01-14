@@ -1,19 +1,46 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $figura = $_POST["figura"];
-    
+
     switch ($figura) {
         case "triangulo":
-            header("Location: ./proc/proc_triangulo.php");
+            include "./Triangulo.php";
+            $baseTriangulo = $_POST['baseTriangulo'];
+            $alturaTriangulo = $_POST['alturaTriangulo'];
+            
+            $triangulo = new Triangulo($baseTriangulo, $alturaTriangulo);
+
+                // Imprime los resultados utilizando el método toString
+                echo "<h3>Resultados:</h3>";
+                echo $triangulo->toString();
             break;
         case "rectangulo":
-            header("Location: ./proc/proc_rectangulo.php");
+            include "./Rectangulo.php";
+            $lado1Rectangulo = $_POST['lado1Rectangulo'];
+            $lado2Rectangulo = $_POST['lado2Rectangulo'];
+
+                // Crea un objeto Cuadrado con el valor del lado recuperado
+                $rectangulo = new Rectangulo($lado1Rectangulo, $lado2Rectangulo);
+
+                // Imprime los resultados utilizando el método toString
+                echo "<h3>Resultados:</h3>";
+                echo $rectangulo->toString();
             break;
         case "cuadrado":
-            header("Location: ./proc/proc_cuadrado.php");
+                    include "./Cuadrado.php";
+                // Recupera el valor del lado del cuadrado enviado por el formulario
+                $ladoCuadrado = $_POST["ladoCuadrado"];
+
+                // Crea un objeto Cuadrado con el valor del lado recuperado
+                $cuadrado = new Cuadrado($ladoCuadrado);
+
+                // Imprime los resultados utilizando el método toString
+                echo "<h3>Resultados:</h3>";
+                echo $cuadrado->toString();
             break;
         case "circulo":
-            header("Location: ./proc/proc_circulo.php");
+            include "./Circulo.php";
+            $radioCirculo = $_POST['radioCirculo'];
             break;
         default:
             // Manejar caso no válido si es necesario
